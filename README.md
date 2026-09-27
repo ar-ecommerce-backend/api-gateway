@@ -1,6 +1,6 @@
 # api-gateway
 
-The single public entry point for the [ar-ecommerce-platform](https://github.com/ar-ecommerce-platform).
+The single public entry point for the [ar-ecommerce-backend](https://github.com/ar-ecommerce-backend).
 Routes `/api/**` to the backing services, enforces JWT auth, and applies CORS for browser clients.
 
 - **Port:** 8080 — this is the only port clients should call
@@ -56,7 +56,7 @@ Quality config is vendored: `gradle/quality.gradle`, `config/checkstyle/`.
 ## Testing
 
 - **Smoke** — `ApiGatewayApplicationTests` boots the full gateway context (routes + security + the multi-issuer resolver), Eureka disabled.
-- **End-to-end** — every request in the [e2e-tests](https://github.com/ar-ecommerce-platform/e2e-tests) suite goes through this gateway, so routing, `StripPrefix`, CORS and JWT enforcement are covered there.
+- **End-to-end** — every request in the [e2e-tests](https://github.com/ar-ecommerce-backend/e2e-tests) suite goes through this gateway, so routing, `StripPrefix`, CORS and JWT enforcement are covered there.
 
 ## Config
 
